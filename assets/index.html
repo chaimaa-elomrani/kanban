@@ -3,19 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <link href="./output.css" rel="stylesheet">
-     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Planorama</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
 </head>
-<body>
+   <body class="m-0 bg-[url('../images/background.jpeg')] bg-cover w-full h-screen bg-no-repeat">
+   <main class="relative">
+
+     <div class="backgound-color w-full z-2 h-36 flex gap-[29rem]">
+        <img src="../images/logo.png" alt="logo" class="w-36 h-36">
+        <button id="addbtn" class="font-inter bg-neutral-300 w-80 h-14 rounded-3xl self-center box-shadow">Add cart</button>
+     </div>
+
+      <form id="form" class="absolute top-1/2 self-center left-96  ">
+        <div class="flex flex-col bg-slate-300 justify-self-center w-[40rem] p-12 gap-6 z-5 rounded-xl form-shadow">
+         <button class="w-6 self-end" id="exitbtn"><img src="../images/exit-icon.png" alt="exit-icon"></button>
+        <input id="title" type="text" name="title" placeholder="Title" class="rounded-2xl p-4">
+        <textarea id="description" name="description" placeholder="Description" class="rounded-2xl p-6"></textarea>
+        <div class="flex justify-center gap-8">
+        <select id="status" name="status" class="rounded-2xl p-2">
+           <option value="">Status</option>
+           <option value="Todo">ToDo</option>  
+           <option value="Doing">Doing</option>  
+           <option value="Done">Done</option>  
+        </select>
+
+        <select id="Priority" name="Priority" class="rounded-2xl p-2">
+          <option value="">Priority</option>
+           <option value="P1">ToDo</option>  
+           <option value="P2">Doing</option>  
+           <option value="P3">Done</option>  
+        </select>
+        <button id="add" class="border-black rounded-2xl bg-slate-500 px-6 py-2">Add</button>
+      </div>
+      </div>
+      
+      </form>
+
+  
+   </main>
     
+    <section class="flex flex-row justify-center gap-24">
+        <div class="cart-color w-80 h-[500px] box-shadow mt-4">
+          <h1 class="font-serif text-4xl text-center bg-slate-200 p-5">To Do</h1>
+        </div>
+
+        <div class="cart-color w-80 h-[500px] box-shadow mt-4">
+          <h1 class="font-serif text-4xl text-center bg-slate-200 p-5">Doing</h1>
+        </div>
+
+        <div class="cart-color w-80 h-[500px] box-shadow mt-4">
+          <h1 class="font-serif text-4xl text-center bg-slate-200 p-5">Done</h1>
+        </div>
+
+        
 
 
-
-
-
-
-
+    </section>
+    
 
 
     <script src="main.js"></script>
