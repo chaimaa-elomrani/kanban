@@ -16,11 +16,16 @@
         <button id="addbtn" class="font-inter bg-neutral-300 w-80 h-14 rounded-3xl self-center box-shadow">Add cart</button>
      </div>
 
-      <form id="form" class="absolute top-1/2 self-center left-96  ">
+      <form id="form" class="absolute top-1/2 self-center left-96">
         <div class="flex flex-col bg-slate-300 justify-self-center w-[40rem] p-12 gap-6 z-5 rounded-xl form-shadow">
          <button class="w-6 self-end" id="exitbtn"><img src="../images/exit-icon.png" alt="exit-icon"></button>
+
         <input id="title" type="text" name="title" placeholder="Title" class="rounded-2xl p-4">
+        <span id="error-title"  class="red text-sm self-center hidden m-0">The title can't be empty</span>
+
         <textarea id="description" name="description" placeholder="Description" class="rounded-2xl p-6"></textarea>
+        <span id="error-description" class="red text-sm self-center hidden m-0">The description can't be empty</span>
+
         <div class="flex justify-center gap-8">
         <select id="status" name="status" class="rounded-2xl p-2">
            <option value="">Status</option>
@@ -28,7 +33,7 @@
            <option value="Doing">Doing</option>  
            <option value="Done">Done</option>  
         </select>
-
+         
         <select id="Priority" name="Priority" class="rounded-2xl p-2">
           <option value="">Priority</option>
            <option value="P1">ToDo</option>  
@@ -44,16 +49,16 @@
   
    </main>
     
-    <section class="flex flex-row justify-center gap-24">
-        <div class="cart-color w-80 h-[500px] box-shadow mt-4">
+    <section id="cards-container" class="flex flex-row justify-center gap-24">
+        <div id="todo" class="cart-color w-80 h-[500px] box-shadow mt-4">
           <h1 class="font-serif text-4xl text-center bg-slate-200 p-5">To Do</h1>
         </div>
 
-        <div class="cart-color w-80 h-[500px] box-shadow mt-4">
+        <div id="doing" class="cart-color w-80 h-[500px] box-shadow mt-4">
           <h1 class="font-serif text-4xl text-center bg-slate-200 p-5">Doing</h1>
         </div>
 
-        <div class="cart-color w-80 h-[500px] box-shadow mt-4">
+        <div id="done" class="cart-color w-80 h-[500px] box-shadow mt-4">
           <h1 class="font-serif text-4xl text-center bg-slate-200 p-5">Done</h1>
         </div>
 
